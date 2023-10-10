@@ -1,0 +1,124 @@
+def count_vowels_consonants(input_string):
+	# Initialize counters for vowels and consonants
+	vowel_count = 0
+	consonant_count = 0
+
+	# Define a string containing all vowels in both uppercase and lowercase
+	vowels = "AEIOUaeiou"
+
+	# Iterate through each character in the input string
+	for char in input_string:
+		# Check if the character is an alphabet letter
+		if char.isalpha():
+			# Check if the character is a vowel
+			if char in vowels:
+				vowel_count += 1
+			else:
+				consonant_count += 1
+
+	# Print the counts of vowels and consonants
+	print("Vowels:", vowel_count)
+	print("Consonants:", consonant_count)
+
+
+# Example usage:
+input_string = "Hello, World!"
+count_vowels_consonants(input_string)
+
+
+def reverse_string(input_string):
+    # Use slicing with a step of -1 to reverse the string
+    reversed_str = input_string[::-1]
+    return reversed_str
+
+# Example usage:
+input_string = "Hello, World!"
+reversed_result = reverse_string(input_string)
+print("Reversed string:", reversed_result)
+
+
+def remove_spaces(input_string):
+    # Use the replace method to replace all spaces with an empty string
+    no_spaces_str = input_string.replace(" ", "")
+    return no_spaces_str
+
+# Example usage:
+input_string = "Hello, World!"
+result = remove_spaces(input_string)
+print("String with spaces removed:", result)
+-------------------------------------------------------------------
+
+def count_vowels_consonants(input_string):
+        vowel_count = 0
+        consonant_count = 0
+        vowels = "AEIOUaeiou"
+
+        for char in input_string:
+                if char.isalpha():
+                        if char in vowels:
+                                vowel_count += 1
+                        else:
+                                consonant_count += 1
+
+        print("Vowels:", vowel_count)
+        print("Consonants:", consonant_count)
+
+
+# Function to reverse a string
+def reverse_string(input_string):
+        return input_string[::-1]
+
+
+# Function to remove spaces from a string
+def remove_spaces(input_string):
+        return input_string.replace(" ", "")
+
+
+# Main program
+while True:
+        user_input = input("Enter a string of text (or 'quit' to exit): ").strip().lower()
+
+        if user_input == "quit":
+                print("Thank you for using the program. Goodbye!")
+                break
+
+        print("Menu:")
+        print("1. Count characters")
+        print("2. Reverse string")
+        print("3. Remove spaces")
+        choice = input("Enter your choice (1/2/3): ")
+
+        if choice == "1":
+                count_vowels_consonants(user_input)
+        elif choice == "2":
+                reversed_str = reverse_string(user_input)
+                print("Reversed string:", reversed_str)
+        elif choice == "3":
+                no_spaces_str = remove_spaces(user_input)
+                print("String with spaces removed:", no_spaces_str)
+        else:
+                print("Invalid choice. Please enter 1, 2, 3, or 'quit'.")
+
+while True:
+        user_input = input("Enter a string of text (or 'quit' to exit): ").strip().lower()
+
+        if user_input == "quit":
+                print("Thank you for using the program. Goodbye!")
+                break
+
+        print("Menu:")
+        print("1. Count characters")
+        print("2. Reverse string")
+        print("3. Remove spaces")
+        choice = input("Enter your choice (1/2/3): ")
+
+        if choice == "1":
+                count_vowels_consonants(user_input)
+        elif choice == "2":
+                reversed_str = reverse_string(user_input)
+                print("Reversed string:", reversed_str)
+        elif choice == "3":
+                no_spaces_str = remove_spaces(user_input)
+                print("String with spaces removed:", no_spaces_str)
+        else:
+                print("Invalid choice. Please enter 1, 2, 3, or 'quit'.")
